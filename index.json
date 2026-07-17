@@ -2,6 +2,93 @@
   "repo": "NerdGr8/swingtribe-release-media",
   "branch": "main",
   "prs": {
+    "1084": {
+      "title": "",
+      "area": "",
+      "images": [
+        {
+          "file": "01_upcoming_games_widget.jpg",
+          "url": "https://raw.githubusercontent.com/NerdGr8/swingtribe-release-media/main/pr-1084/01_upcoming_games_widget.jpg",
+          "caption": "",
+          "primary": true,
+          "w": 680,
+          "h": 680,
+          "shape": "square"
+        },
+        {
+          "file": "02_handicap_widget.jpg",
+          "url": "https://raw.githubusercontent.com/NerdGr8/swingtribe-release-media/main/pr-1084/02_handicap_widget.jpg",
+          "caption": "",
+          "primary": false,
+          "w": 680,
+          "h": 680,
+          "shape": "square"
+        },
+        {
+          "file": "03_oom_rankings_widget.jpg",
+          "url": "https://raw.githubusercontent.com/NerdGr8/swingtribe-release-media/main/pr-1084/03_oom_rankings_widget.jpg",
+          "caption": "",
+          "primary": false,
+          "w": 680,
+          "h": 680,
+          "shape": "square"
+        },
+        {
+          "file": "04_fairdrop_widget.jpg",
+          "url": "https://raw.githubusercontent.com/NerdGr8/swingtribe-release-media/main/pr-1084/04_fairdrop_widget.jpg",
+          "caption": "",
+          "primary": false,
+          "w": 680,
+          "h": 680,
+          "shape": "square"
+        },
+        {
+          "file": "05_payments_widget.jpg",
+          "url": "https://raw.githubusercontent.com/NerdGr8/swingtribe-release-media/main/pr-1084/05_payments_widget.jpg",
+          "caption": "",
+          "primary": false,
+          "w": 680,
+          "h": 680,
+          "shape": "square"
+        },
+        {
+          "file": "06_creator_registered.jpg",
+          "url": "https://raw.githubusercontent.com/NerdGr8/swingtribe-release-media/main/pr-1084/06_creator_registered.jpg",
+          "caption": "",
+          "primary": false,
+          "w": 780,
+          "h": 1560,
+          "shape": "phone"
+        },
+        {
+          "file": "07_admin_empty_roster_still_manageable.jpg",
+          "url": "https://raw.githubusercontent.com/NerdGr8/swingtribe-release-media/main/pr-1084/07_admin_empty_roster_still_manageable.jpg",
+          "caption": "",
+          "primary": false,
+          "w": 780,
+          "h": 1560,
+          "shape": "phone"
+        },
+        {
+          "file": "08_tribe_admin_fab.jpg",
+          "url": "https://raw.githubusercontent.com/NerdGr8/swingtribe-release-media/main/pr-1084/08_tribe_admin_fab.jpg",
+          "caption": "",
+          "primary": false,
+          "w": 780,
+          "h": 1560,
+          "shape": "phone"
+        },
+        {
+          "file": "09_regular_member_no_fab.jpg",
+          "url": "https://raw.githubusercontent.com/NerdGr8/swingtribe-release-media/main/pr-1084/09_regular_member_no_fab.jpg",
+          "caption": "",
+          "primary": false,
+          "w": 780,
+          "h": 1560,
+          "shape": "phone"
+        }
+      ]
+    },
     "1104": {
       "title": "A fresh look for every leaderboard",
       "area": "Tournaments",
@@ -41,6 +128,129 @@
           "w": 390,
           "h": 700,
           "shape": "phone"
+        }
+      ]
+    },
+    "1108": {
+      "title": "",
+      "area": "",
+      "images": [
+        {
+          "file": "01_entry.jpg",
+          "url": "https://raw.githubusercontent.com/NerdGr8/swingtribe-release-media/main/pr-1108/01_entry.jpg",
+          "caption": "",
+          "primary": true,
+          "w": 1000,
+          "h": 1643,
+          "shape": "portrait"
+        },
+        {
+          "file": "03_card_bold.jpg",
+          "url": "https://raw.githubusercontent.com/NerdGr8/swingtribe-release-media/main/pr-1108/03_card_bold.jpg",
+          "caption": "",
+          "primary": false,
+          "w": 1000,
+          "h": 1778,
+          "shape": "phone"
+        },
+        {
+          "file": "04_card_minimal.jpg",
+          "url": "https://raw.githubusercontent.com/NerdGr8/swingtribe-release-media/main/pr-1108/04_card_minimal.jpg",
+          "caption": "",
+          "primary": false,
+          "w": 1000,
+          "h": 1778,
+          "shape": "phone"
+        },
+        {
+          "file": "05_card_spotlight.jpg",
+          "url": "https://raw.githubusercontent.com/NerdGr8/swingtribe-release-media/main/pr-1108/05_card_spotlight.jpg",
+          "caption": "",
+          "primary": false,
+          "w": 1000,
+          "h": 1778,
+          "shape": "phone"
+        },
+        {
+          "file": "06_card_chyron.jpg",
+          "url": "https://raw.githubusercontent.com/NerdGr8/swingtribe-release-media/main/pr-1108/06_card_chyron.jpg",
+          "caption": "",
+          "primary": false,
+          "w": 1000,
+          "h": 1778,
+          "shape": "phone"
+        },
+        {
+          "file": "07_card_panel.jpg",
+          "url": "https://raw.githubusercontent.com/NerdGr8/swingtribe-release-media/main/pr-1108/07_card_panel.jpg",
+          "caption": "",
+          "primary": false,
+          "w": 1000,
+          "h": 1778,
+          "shape": "phone"
+        },
+        {
+          "file": "08_leaderboard_final_stableford.jpg",
+          "url": "https://raw.githubusercontent.com/NerdGr8/swingtribe-release-media/main/pr-1108/08_leaderboard_final_stableford.jpg",
+          "caption": "",
+          "primary": false,
+          "w": 1000,
+          "h": 525,
+          "shape": "wide"
+        },
+        {
+          "file": "09_leaderboard_final_stroke.jpg",
+          "url": "https://raw.githubusercontent.com/NerdGr8/swingtribe-release-media/main/pr-1108/09_leaderboard_final_stroke.jpg",
+          "caption": "",
+          "primary": false,
+          "w": 1000,
+          "h": 525,
+          "shape": "wide"
+        },
+        {
+          "file": "10_leaderboard_live.jpg",
+          "url": "https://raw.githubusercontent.com/NerdGr8/swingtribe-release-media/main/pr-1108/10_leaderboard_live.jpg",
+          "caption": "",
+          "primary": false,
+          "w": 1000,
+          "h": 525,
+          "shape": "wide"
+        },
+        {
+          "file": "11_leaderboard_story.jpg",
+          "url": "https://raw.githubusercontent.com/NerdGr8/swingtribe-release-media/main/pr-1108/11_leaderboard_story.jpg",
+          "caption": "",
+          "primary": false,
+          "w": 1000,
+          "h": 1778,
+          "shape": "phone"
+        },
+        {
+          "file": "12_recent_game_widget.jpg",
+          "url": "https://raw.githubusercontent.com/NerdGr8/swingtribe-release-media/main/pr-1108/12_recent_game_widget.jpg",
+          "caption": "",
+          "primary": false,
+          "w": 430,
+          "h": 560,
+          "shape": "portrait"
+        },
+        {
+          "file": "13_composer_preview.jpg",
+          "url": "https://raw.githubusercontent.com/NerdGr8/swingtribe-release-media/main/pr-1108/13_composer_preview.jpg",
+          "caption": "",
+          "primary": false,
+          "w": 828,
+          "h": 1792,
+          "shape": "phone"
+        },
+        {
+          "file": "14_recent_round_card.jpg",
+          "url": "https://raw.githubusercontent.com/NerdGr8/swingtribe-release-media/main/pr-1108/14_recent_round_card.jpg",
+          "caption": "",
+          "primary": false,
+          "w": 1000,
+          "h": 319,
+          "shape": "wide"
         }
       ]
     }
