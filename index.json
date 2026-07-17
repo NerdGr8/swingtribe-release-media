@@ -1,5 +1,48 @@
 {
   "repo": "NerdGr8/swingtribe-release-media",
   "branch": "main",
-  "prs": {}
+  "prs": {
+    "1104": {
+      "title": "A fresh look for every leaderboard",
+      "area": "Tournaments",
+      "images": [
+        {
+          "file": "01-leaderboard.jpg",
+          "url": "https://raw.githubusercontent.com/NerdGr8/swingtribe-release-media/main/pr-1104/01-leaderboard.jpg",
+          "caption": "Redesigned card leaderboard",
+          "primary": true,
+          "w": 1000,
+          "h": 2174,
+          "shape": "phone"
+        },
+        {
+          "file": "02-teams.jpg",
+          "url": "https://raw.githubusercontent.com/NerdGr8/swingtribe-release-media/main/pr-1104/02-teams.jpg",
+          "caption": "",
+          "primary": false,
+          "w": 1000,
+          "h": 2174,
+          "shape": "phone"
+        },
+        {
+          "file": "03-ryder-cup.jpg",
+          "url": "https://raw.githubusercontent.com/NerdGr8/swingtribe-release-media/main/pr-1104/03-ryder-cup.jpg",
+          "caption": "",
+          "primary": false,
+          "w": 390,
+          "h": 700,
+          "shape": "phone"
+        },
+        {
+          "file": "04-knockout.jpg",
+          "url": "https://raw.githubusercontent.com/NerdGr8/swingtribe-release-media/main/pr-1104/04-knockout.jpg",
+          "caption": "",
+          "primary": false,
+          "w": 390,
+          "h": 700,
+          "shape": "phone"
+        }
+      ]
+    }
+  }
 }
