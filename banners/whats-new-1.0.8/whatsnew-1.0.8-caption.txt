@@ -1,0 +1,12 @@
+SwingTribe 1.0.8 is out.
+
+- Hole prizes on the scoring screen: the sponsor, the number to beat, and one tap to claim. Birdie and eagle challenges score themselves.
+- Scores entered without signal are saved and sent when you reconnect.
+- Sign in with a WhatsApp code, and register from outside South Africa.
+- Anyone in the field can add players and guests once the tee sheet is out.
+- Course lists sort A to Z, with a Nearby filter and distances.
+- Your stats now count club rounds, not just SwingTribe games.
+
+Free on the App Store and Google Play: play.swingtribe.app/open
+
+#SwingTribe #golf #golfsa #golfsociety #golfday #teetime #golflife #societygolf
