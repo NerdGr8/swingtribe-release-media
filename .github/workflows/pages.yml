@@ -1,0 +1,65 @@
+name: Publish banner proof sheet
+
+# Serves banners/ at https://nerdgr8.github.io/swingtribe-release-media/ so the
+# proof sheet is a page anyone can open rather than a 2.8 MB file they have to
+# download and trust. Every artwork file ships alongside it, which is what
+# makes the per-plate filename links in the sheet resolve.
+#
+# Deliberately scoped to banners/. Publishing the repo root would put pr-*/
+# under a second public URL for no gain: those images already have stable
+# raw.githubusercontent.com links, and index.json points at those.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'banners/**'
+      - '.github/workflows/pages.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Never cancel a running deploy: Pages serves whatever finished last, so a
+# cancelled run can leave the site older than the commit that triggered it.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      # enablement: true turns Pages on the first time this runs, so nobody has
+      # to find the setting. It is a no-op on every run after that.
+      - uses: actions/configure-pages@v5
+        with:
+          enablement: true
+
+      - name: Check the sheet and its files agree
+        run: |
+          missing=0
+          # Every per-plate link in the sheet must resolve to a file that is
+          # actually here. A rebuild that renames a board would otherwise
+          # publish a page full of 404s and look fine until somebody clicked.
+          grep -o 'class="slug" href="[^"]*"' banners/index.html \
+            | sed 's/.*href="//; s/"$//' | sort -u > /tmp/links.txt
+          while read -r f; do
+            if [ ! -f "banners/$f" ]; then echo "::error::missing $f"; missing=1; fi
+          done < /tmp/links.txt
+          echo "checked $(wc -l < /tmp/links.txt) links"
+          exit $missing
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: banners
+
+      - id: deployment
+        uses: actions/deploy-pages@v4
