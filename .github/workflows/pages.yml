@@ -43,18 +43,30 @@ jobs:
         with:
           enablement: true
 
-      - name: Check the sheet and its files agree
+      - name: Check every sheet and its files agree
         run: |
+          # Every per-plate link must resolve to a file that is actually here.
+          # A rebuild that renames a board would otherwise publish a page full
+          # of 404s and look fine until somebody clicked.
+          #
+          # Every sheet, not just the top one: the golf day pack is its own
+          # page with 25 links of its own, and checking banners/index.html
+          # alone left all of them unchecked. Links are relative to the sheet
+          # that carries them, so each is resolved against its own directory.
           missing=0
-          # Every per-plate link in the sheet must resolve to a file that is
-          # actually here. A rebuild that renames a board would otherwise
-          # publish a page full of 404s and look fine until somebody clicked.
-          grep -o 'class="slug" href="[^"]*"' banners/index.html \
-            | sed 's/.*href="//; s/"$//' | sort -u > /tmp/links.txt
-          while read -r f; do
-            if [ ! -f "banners/$f" ]; then echo "::error::missing $f"; missing=1; fi
-          done < /tmp/links.txt
-          echo "checked $(wc -l < /tmp/links.txt) links"
+          total=0
+          for sheet in $(find banners -name index.html | sort); do
+            dir=$(dirname "$sheet")
+            grep -o 'class="slug" href="[^"]*"' "$sheet" \
+              | sed 's/.*href="//; s/"$//' | sort -u > /tmp/links.txt
+            n=$(wc -l < /tmp/links.txt)
+            total=$((total + n))
+            while read -r f; do
+              if [ ! -f "$dir/$f" ]; then echo "::error::missing $dir/$f"; missing=1; fi
+            done < /tmp/links.txt
+            echo "$sheet: $n links"
+          done
+          echo "checked $total links across every sheet"
           exit $missing
 
       - uses: actions/upload-pages-artifact@v3
