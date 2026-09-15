@@ -46,7 +46,9 @@ const CAMPAIGNS = [
   { key: 'friendlies', name: 'Friendlies', accent: '#33EDD7',
     blurb: 'For the Saturday fourball. Live scoring on all four phones, and nobody doing the card.' },
   { key: 'different', name: 'What makes us different', accent: '#48D070',
-    blurb: 'The argument rather than a feature. Opens on the claim, then a side by side against what a scoring app does, then the consequence.' },
+    blurb: 'The argument at a glance. The claim, a count of what a scoring app does against what this does, then the consequence. Four panels, 24 seconds.' },
+  { key: 'season', name: 'A season, not a round', accent: '#037CD5',
+    blurb: 'The same six claims with room to breathe, one per panel. For the screen somebody sits in front of rather than walks past. Seven panels, 42 seconds.' },
 ];
 
 const TREATMENTS = [
@@ -70,7 +72,16 @@ for (const t of TREATMENTS) {
   for (const c of CAMPAIGNS) {
     const s = stem(c.key, t.key);
     const loop = `tv-${s}-loop.mp4`;
-    const panels = [1, 2, 3, 4].map((i) => `tv-${s}-0${i}.png`);
+    // Campaigns no longer all have four panels: the season one has seven. The
+    // count comes off the build rather than a constant, so adding a panel does
+    // not silently drop it from the page.
+    const panels = [];
+    for (let i = 1; i <= 20; i += 1) {
+      const f = `tv-${s}-${String(i).padStart(2, '0')}.png`;
+      if (!fs.existsSync(path.join(OUT, f))) break;
+      panels.push(f);
+    }
+    if (!panels.length) missing.push(`tv-${s}-01.png`);
 
     for (const f of [loop, ...panels]) {
       if (!fs.existsSync(path.join(OUT, f))) missing.push(f);
@@ -127,10 +138,10 @@ for (const { t, plates } of cards) {
         </video>
         <p class="files">
           <a class="dl" href="${p.loop}" download>Download the loop</a>
-          <span class="meta">MP4 &middot; 1920 x 1080 &middot; 24s &middot; ${mb} MB</span>
+          <span class="meta">MP4 &middot; 1920 x 1080 &middot; ${p.panels.length * 6}s &middot; ${mb} MB</span>
         </p>
         <div class="shots">${shots.join('')}</div>
-        <p class="meta">The four stills, 1920 x 1080 PNG. Click any one to open it full size.</p>
+        <p class="meta">${p.panels.length} stills, 1920 x 1080 PNG. Click any one to open it full size.</p>
       </article>`);
   }
 
@@ -174,7 +185,7 @@ const page = `<!doctype html>
         font-size:14px; padding:9px 18px; border-radius:9999px; }
   .dl:hover { background:#037CD5; }
   .meta { color:var(--muted); font-size:13px; }
-  .shots { display:grid; grid-template-columns:repeat(4,1fr); gap:8px; margin-bottom:8px; }
+  .shots { display:grid; grid-template-columns:repeat(auto-fit,minmax(88px,1fr)); gap:8px; margin-bottom:8px; }
   .shot img { width:100%; display:block; border-radius:6px; border:1px solid var(--line); }
   .shot:hover img { border-color:var(--accent); }
   @media (max-width:520px) { .shots { grid-template-columns:repeat(2,1fr); } }
