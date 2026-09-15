@@ -45,6 +45,8 @@ const CAMPAIGNS = [
     blurb: 'For the golfers who already know who owes them a rematch. A season-long record of exactly who beat who.' },
   { key: 'friendlies', name: 'Friendlies', accent: '#33EDD7',
     blurb: 'For the Saturday fourball. Live scoring on all four phones, and nobody doing the card.' },
+  { key: 'different', name: 'What makes us different', accent: '#48D070',
+    blurb: 'The argument rather than a feature. Opens on the claim, then a side by side against what a scoring app does, then the consequence.' },
 ];
 
 const TREATMENTS = [
