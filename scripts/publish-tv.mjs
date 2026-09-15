@@ -163,8 +163,7 @@ const page = `<!doctype html>
   .sec-head h2 { font-size:26px; letter-spacing:-0.01em; }
   .sec-head p { color:var(--muted); max-width:78ch; margin-top:6px; }
   .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(360px,1fr)); gap:24px; }
-  .campaign { background:#fff; border:1px solid var(--line); border-radius:16px; padding:20px;
-              border-top:5px solid var(--accent); }
+  .campaign { background:#fff; border:1px solid var(--line); border-radius:16px; padding:20px; }
   .campaign h3 { font-size:19px; letter-spacing:-0.01em; }
   .campaign header p { color:var(--muted); font-size:14.5px; margin-top:6px; }
   video { width:100%; aspect-ratio:16/9; border-radius:10px; background:#000; margin:16px 0 12px; display:block; }
