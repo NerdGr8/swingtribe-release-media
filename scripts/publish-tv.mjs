@@ -46,9 +46,9 @@ const CAMPAIGNS = [
   { key: 'friendlies', name: 'Friendlies', accent: '#33EDD7',
     blurb: 'For the Saturday fourball. Live scoring on all four phones, and nobody doing the card.' },
   { key: 'different', name: 'What makes us different', accent: '#48D070',
-    blurb: 'The argument at a glance. The claim, a count of what a scoring app does against what this does, then the consequence. Four panels, 24 seconds.' },
+    blurb: 'The argument at a glance. The claim, a count of what a scoring app does against what this does, then the consequence. Four panels.' },
   { key: 'season', name: 'A season, not a round', accent: '#037CD5',
-    blurb: 'The same six claims with room to breathe, one per panel. For the screen somebody sits in front of rather than walks past. Seven panels, 42 seconds.' },
+    blurb: 'The same six claims with room to breathe, one per panel. For the screen somebody sits in front of rather than walks past. Seven panels, so each is on screen for half as long as a four panel campaign.' },
 ];
 
 const TREATMENTS = [
@@ -138,7 +138,7 @@ for (const { t, plates } of cards) {
         </video>
         <p class="files">
           <a class="dl" href="${p.loop}" download>Download the loop</a>
-          <span class="meta">MP4 &middot; 1920 x 1080 &middot; ${p.panels.length * 6}s &middot; ${mb} MB</span>
+          <span class="meta">MP4 H.264 &middot; 1920 x 1080 &middot; 25 fps &middot; 30s &middot; ${mb} MB</span>
         </p>
         <div class="shots">${shots.join('')}</div>
         <p class="meta">${p.panels.length} stills, 1920 x 1080 PNG. Click any one to open it full size.</p>
@@ -194,9 +194,12 @@ const page = `<!doctype html>
 <body>
   <header class="top"><div class="wrap">
     <h1>SwingTribe adverts for clubhouse screens</h1>
-    <p>Three campaigns in four looks, for a 1920 x 1080 television in a clubhouse, a pro shop or behind a
-       registration desk. Each campaign is a 24 second loop plus the four stills it is cut from. Everything is
-       downloadable from this page.</p>
+    <p>Five campaigns in four looks, for a television in a clubhouse, a pro shop or behind a registration
+       desk. Each campaign is a 30 second loop plus the stills it is cut from. Everything is downloadable
+       from this page.</p>
+    <p class="note">Built to the Golf TV 2026 delivery specification: H.264 in an MP4, 1920 x 1080, 25 frames
+       per second, 30 seconds exactly, and all text inside the 80% title-safe area so nothing is lost to
+       overscan.</p>
     <p class="note">Every campaign's code is its own, so scans can be told apart by campaign.
        Codes are printed into the artwork and cannot be re-pointed afterwards: a change means new files.</p>
   </div></header>
