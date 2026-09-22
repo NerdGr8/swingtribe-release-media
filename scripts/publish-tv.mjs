@@ -47,8 +47,10 @@ const CAMPAIGNS = [
     blurb: 'For the Saturday fourball. Live scoring on all four phones, and nobody doing the card.' },
   { key: 'different', name: 'What makes us different', accent: '#48D070',
     blurb: 'The argument at a glance. The claim, a count of what a scoring app does against what this does, then the consequence. Four panels.' },
-  { key: 'season', name: 'A season, not a round', accent: '#037CD5',
-    blurb: 'The same six claims with room to breathe, one per panel. For the screen somebody sits in front of rather than walks past. Seven panels, so each is on screen for half as long as a four panel campaign.' },
+  { key: 'season-run', name: 'Running the season', accent: '#037CD5',
+    blurb: 'For the organiser. What the app does between the games: the fixtures, the chasing, the entries and the money. Three claims with room to breathe, then the code.' },
+  { key: 'season-play', name: 'Playing the season', accent: '#037CD5',
+    blurb: 'For the golfer. The live board, the handicap and the Order of Merit. The other half of the same argument, and it stands on its own.' },
 ];
 
 const TREATMENTS = [
@@ -194,7 +196,7 @@ const page = `<!doctype html>
 <body>
   <header class="top"><div class="wrap">
     <h1>SwingTribe adverts for clubhouse screens</h1>
-    <p>Five campaigns in four looks, for a television in a clubhouse, a pro shop or behind a registration
+    <p>Six campaigns in four looks, for a television in a clubhouse, a pro shop or behind a registration
        desk. Each campaign is a 30 second loop plus the stills it is cut from. Everything is downloadable
        from this page.</p>
     <p class="note">Built to the Golf TV 2026 delivery specification: H.264 in an MP4, 1920 x 1080, 25 frames
