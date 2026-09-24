@@ -51,6 +51,20 @@ const CAMPAIGNS = [
     blurb: 'For the organiser. What the app does between the games: the fixtures, the chasing, the entries and the money. Three claims with room to breathe, then the code.' },
   { key: 'season-play', name: 'Playing the season', accent: '#037CD5',
     blurb: 'For the golfer. The live board, the handicap and the Order of Merit. The other half of the same argument, and it stands on its own.' },
+
+  // The Festival of Golf, which is DATED: qualifying through October, the
+  // festival proper 1 November to 31 January. Two waves because one set of
+  // artwork cannot do both, and two copy treatments per wave because which
+  // argument works is an open question. A club runs ONE of these four at a
+  // time, so they are listed as four campaigns rather than as variants of one.
+  { key: 'festival-qualify', name: 'Festival qualifiers, October', accent: '#48D070',
+    blurb: 'On the wall before 1 October. Qualifying games all month, and the points carry into the festival table when it opens. Sells a head start, never a deadline: October is not a gate.' },
+  { key: 'festival', name: 'Festival of Golf, from November', accent: '#33EDD7',
+    blurb: 'One Order of Merit across every club taking part, 1 November to 31 January. Sells that it is never too late to join, which is the objection a golfer actually has in December.' },
+  { key: 'festival-qualify-v2', name: 'Festival qualifiers, October (V2)', accent: '#48D070',
+    blurb: 'The same wave, the opposite persuasion. V1 removes the friction; this supplies the stake: be on the table before it opens.' },
+  { key: 'festival-v2', name: 'Festival of Golf, from November (V2)', accent: '#33EDD7',
+    blurb: 'One table, every club, and a name at the top of it from the first week. Run this against the V1 spot above and pick one; they share a QR on purpose, so the comparison isolates the copy.' },
 ];
 
 const TREATMENTS = [
