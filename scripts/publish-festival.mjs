@@ -56,10 +56,8 @@ const published = (slug, kind) => (kind === 'guides' ? `${slug}-guides.pdf` : `$
 
 /** The three stories each wave tells, in the order the boards are numbered. */
 const STORIES = {
-  'festival-qualify': ['Get on the festival table', 'You do not have to be scratch', 'No entry form, no extra round'],
-  festival: ['Your next round counts', 'You do not have to be scratch', 'Still not too late'],
-  'festival-qualify-v2': ['Be on it before it starts', 'Opens in November, start now', 'First names on the board'],
-  'festival-v2': ['One table, every club', 'Somebody is top of it', 'Three months, one winner'],
+  'festival-qualify': ['Be on it before it starts', 'You do not have to be scratch', 'Opens in November, start now'],
+  festival: ['One table, every club', 'You do not have to be scratch', 'Still not too late'],
 };
 
 const FORMATS = [
@@ -90,14 +88,15 @@ const SECTIONS = [
   {
     dir: 'compare',
     kind: 'png',
-    heading: 'Start here: two ways to say it',
+    heading: 'Start here: the two waves',
     lede:
-      'The same campaign, the same dates, the same QR, argued from opposite ends. <b>V1 removes the friction</b>: nothing to ' +
-      'sign up for, no extra round, points off your own handicap. <b>V2 supplies the stake</b>: one Order of Merit across every ' +
-      'club taking part, and a name at the top of it from the first week. Both go through the identical layout code, so a ' +
-      'side by side isolates the words and nothing else. Top row is V1, bottom row is V2.',
-    items: [...socialItems('festival', [['square', 'V1 &middot; Square 1:1']]),
-            ...socialItems('festival-v2', [['square', 'V2 &middot; Square 1:1']])],
+      'One campaign in two moves, because one set of artwork cannot do both: a board saying "from 1 November" is wrong on a ' +
+      'wall in October, and a board saying "qualifying is on" is wrong in December. <b>Green is the October wave</b> and ' +
+      'sells a head start, never a deadline. <b>Cyan is the festival proper</b>, 1 November to 31 January, and its third ' +
+      'board says it is still not too late, because October is deliberately not a gate. Each wave carries its own QR, so an ' +
+      'October scan and a December scan are told apart.',
+    items: [...socialItems('festival-qualify', [['square', 'October &middot; Square 1:1']]),
+            ...socialItems('festival', [['square', 'Festival &middot; Square 1:1']])],
   },
   {
     dir: 'print',
@@ -115,21 +114,6 @@ const SECTIONS = [
     heading: 'Festival of Golf, printed',
     lede: 'Goes up for 1 November and stays up to the end of January.',
     items: printItems('festival'),
-  },
-  {
-    dir: 'print',
-    kind: 'pdf',
-    heading: 'V2 printed, the two boards that carry an argument',
-    lede:
-      'Only the poster and the pull-up get a V2. Those are the surfaces with a headline, a sub line, three steps and a call ' +
-      'to action. The tee banner and the A-frame are one line read at twenty paces and the sign-up sheet is a form with ' +
-      'ruled rows, so a second treatment of those would be a second file saying the same thing.',
-    items: [
-      ['festival-qualify-v2-a4-poster', 'Club poster, October (V2)', 'A4 210x297mm'],
-      ['festival-qualify-v2-rollup-850x2000', 'Pull-up, October (V2)', '850x2000mm'],
-      ['festival-v2-a4-poster', 'Club poster, festival (V2)', 'A4 210x297mm'],
-      ['festival-v2-rollup-850x2000', 'Pull-up, festival (V2)', '850x2000mm'],
-    ],
   },
   {
     dir: 'proofing',
@@ -158,18 +142,6 @@ const SECTIONS = [
     kind: 'png',
     heading: 'Festival of Golf, social',
     items: socialItems('festival'),
-  },
-  {
-    dir: 'social',
-    kind: 'png',
-    heading: 'October qualifiers, social (V2)',
-    items: socialItems('festival-qualify-v2'),
-  },
-  {
-    dir: 'social',
-    kind: 'png',
-    heading: 'Festival of Golf, social (V2)',
-    items: socialItems('festival-v2'),
   },
 ];
 
