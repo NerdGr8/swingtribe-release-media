@@ -48,7 +48,7 @@ const SECTIONS = [
   },
   {
     title: 'Instagram and Facebook Stories',
-    note: '1080 x 1920. The white band clears the reply bar.',
+    note: '1080 x 1920. Every word, logo and code stays out of the top 14% and bottom 20% that Instagram and Facebook cover with their own buttons.',
     cards: KEYS.map((k, i) => ({ file: `story/${k}.png`, label: `${i + 1}. ${STORIES[i]}`, meta: '1080 x 1920', tall: true })),
   },
   {
@@ -140,7 +140,7 @@ code{font-size:13px}
   <p class="eyebrow">Campaign pack &middot; SwingTribe and BMW Menlyn</p>
   <h1>BMW Menlyn Festival of Golf ads</h1>
   <p class="lede">Four short stories that ask golfers to join the BMW Menlyn Festival of Golf tribe in the SwingTribe app: one table across every club, your usual comp is your entry, you do not have to be scratch, and it is still not too late. Click any card for the full-size file.</p>
-  <div class="note">Every code opens <code>play.swingtribe.app/t/FLF7SG</code> with its own <code>ref</code> per channel (<code>ad-festival-bmw-reel</code>, <code>-golftv</code>, <code>-story</code>, <code>-feed</code>, <code>-whatsapp</code>, <code>-print</code>), so scans can be told apart. Joining asks each golfer to agree that SwingTribe shares their details with BMW Menlyn, and every piece says so. The BMW Menlyn wordmark is BMW Menlyn's own, supplied by them, and sits grey on white at the bottom left.</div>
+  <div class="note">Every code opens <code>play.swingtribe.app/t/FLF7SG</code> with its own <code>ref</code> per channel (<code>ad-festival-bmw-reel</code>, <code>-golftv</code>, <code>-story</code>, <code>-feed</code>, <code>-whatsapp</code>, <code>-print</code>), so scans can be told apart. Every code is checked twice before it ships: in the layout, and by scanning the finished image. It must open its own link and keep four modules of clear white on every side, on every still and through every frame of both videos. Joining asks each golfer to agree that SwingTribe shares their details with BMW Menlyn, and every piece says so. The BMW Menlyn wordmark is BMW Menlyn's own, supplied by them, and sits grey on white at the bottom left.</div>
 </header>
 ${body}
 </div></body></html>`;
