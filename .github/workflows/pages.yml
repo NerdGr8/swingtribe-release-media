@@ -1,19 +1,25 @@
-name: Publish banner proof sheet
+name: Publish banner proof sheet and help media
 
 # Serves banners/ at https://nerdgr8.github.io/swingtribe-release-media/ so the
 # proof sheet is a page anyone can open rather than a 2.8 MB file they have to
 # download and trust. Every artwork file ships alongside it, which is what
 # makes the per-plate filename links in the sheet resolve.
 #
-# Deliberately scoped to banners/. Publishing the repo root would put pr-*/
-# under a second public URL for no gain: those images already have stable
+# Deliberately scoped to banners/ and help/. Publishing the repo root would put
+# pr-*/ under a second public URL for no gain: those images already have stable
 # raw.githubusercontent.com links, and index.json points at those.
+#
+# help/ is served at https://nerdgr8.github.io/swingtribe-release-media/help/
+# for both SwingTribe apps' help guides (see help/README.md). It is here and
+# not on jsDelivr because jsDelivr refuses any GitHub repo snapshot over 50 MB,
+# and this repo is several hundred.
 
 on:
   push:
     branches: [main]
     paths:
       - 'banners/**'
+      - 'help/**'
       - '.github/workflows/pages.yml'
   workflow_dispatch:
 
@@ -69,9 +75,19 @@ jobs:
           echo "checked $total links across every sheet"
           exit $missing
 
+      # The site is banners/ at the root, as it always was, with help/ beside
+      # it. Refuses a banners/help/ rather than let one folder hide the other.
+      - name: Assemble the site
+        run: |
+          if [ -e banners/help ]; then echo "::error::banners/help would collide with help/"; exit 1; fi
+          mkdir -p _site
+          cp -R banners/. _site/
+          cp -R help _site/help
+          echo "site: $(du -sh _site | cut -f1), help: $(ls help | wc -l) files"
+
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: banners
+          path: _site
 
       - id: deployment
         uses: actions/deploy-pages@v4
